@@ -70,7 +70,7 @@ public class Mage extends Player {
     public void attackLeft() {
         int i = x;
         if (i > 0) {
-            Spell spell = new Spell(x, y, "left");
+            Spell spell = new Spell(x, y, "left", id);
             GamePanel.projectiles.add(spell);
             System.out.println("Left Mage missile");
         }
@@ -80,7 +80,7 @@ public class Mage extends Player {
     public void attackRight() {
         int i = x;
         if (i < Constants.MAX_RIGHT_POSITION / Constants.CHARACTER_IMG_WIDTH) {
-            Spell spell = new Spell(x , y, "right");
+            Spell spell = new Spell(x , y, "right", id);
             GamePanel.projectiles.add(spell);
             System.out.println("Right Mage missile");
         }

@@ -20,7 +20,7 @@ public class Archer extends Player{
     public void attackLeft() {
         int i = x;
         if (i > 0) {
-            Arrow arrow = new Arrow(x, y, "left");
+            Arrow arrow = new Arrow(x, y, "left", id);
             GamePanel.projectiles.add(arrow); // add the new arrow to the list
             System.out.println("Left Archer arrow");
         }
@@ -30,7 +30,7 @@ public class Archer extends Player{
     public void attackRight(){
         int i= x;
         if (i < Constants.MAX_RIGHT_PLACE){
-            Arrow arrow=new Arrow(x, y, "right");
+            Arrow arrow=new Arrow(x, y, "right", id);
             GamePanel.projectiles.add(arrow);
             System.out.println("Right Archer arrow");
         }

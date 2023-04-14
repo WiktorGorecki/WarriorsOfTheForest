@@ -12,12 +12,14 @@ public abstract class Projectile {
     protected int y;
     protected Image baseImage;
     protected String direction;
+    public int parentId;
 
-    public Projectile(int x, int y, String direction, String imagePath) {
+    public Projectile(int x, int y, String direction, String imagePath, int parentId) {
         this.x = x;
         this.y = y;
         this.direction = direction;
         baseImage = new ImageIcon(Constants.IMAGE_FOLDER + imagePath).getImage();
+        this.parentId = parentId;
     }
     @Override
     public String toString() {
