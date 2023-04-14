@@ -36,9 +36,9 @@ public class Main {
                 4,
                 4,
                 KeyEvent.VK_G,
+                KeyEvent.VK_J,
+                KeyEvent.VK_Y,
                 KeyEvent.VK_H,
-                KeyEvent.VK_T,
-                KeyEvent.VK_B,
                 KeyEvent.VK_6,
                 KeyEvent.VK_7
         ));
