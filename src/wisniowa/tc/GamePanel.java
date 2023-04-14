@@ -141,57 +141,7 @@ public class GamePanel extends JPanel {
             );
         }
     }
-           /* if (player instanceof Archer archer) {
-                Iterator<Arrow> iter = archer.getArrows().iterator();
-                while (iter.hasNext()) {
-                    Arrow arrow = iter.next();
-                    if (arrow.getX() > Constants.MAX_RIGHT_PLACE || arrow.getX() < 0) {
-                        iter.remove();
-                        continue;
-                    }
-                    arrow.move();
-                    g.drawImage(
-                            arrow.getBaseImage(),
-                            arrow.getX() * Constants.CHARACTER_IMG_WIDTH,
-                            arrow.getY() * Constants.CHARACTER_IMG_HEIGHT,
-                            this
-                    );
-                }
-            }
-            if (player instanceof Mage mage) {
-                Iterator<Spell> iter = mage.getSpells().iterator();
-                while (iter.hasNext()) {
-                    Spell spell = iter.next();
-                    System.out.println(spell.toString());
-                    if (spell.getX() > Constants.MAX_RIGHT_PLACE || spell.getX() < 0) {
-                        iter.remove();
-                        continue;
-                    }
-                    spell.move();
-                    g.drawImage(
-                            spell.getBaseImage(),
-                            spell.getX() * Constants.CHARACTER_IMG_WIDTH,
-                            spell.getY() * Constants.CHARACTER_IMG_HEIGHT,
-                            this
-                    );
-                }
-            }
-        }
 
-            */
-
-
-
-        //g.drawImage(tmpImage, x, y, this);
-
-        /*System.out.println(Player.getOccupatedPlaces().length);
-        for (boolean[]rows : Player.getOccupatedPlaces()) {
-            for (boolean occupPlace : rows) {
-                System.out.print(occupPlace + " ");
-            }
-            System.out.println();
-        }
-        System.out.println();*/
     public class HeroesKeyListener2 extends KeyAdapter {
         @Override
         public void keyPressed(KeyEvent e) {
@@ -200,19 +150,15 @@ public class GamePanel extends JPanel {
             for (Player player : players) {
                 if (player.getGoLeftKey() == key) {
                     player.tryGoLeft();
-                    //player.setX(player.getX() - Constants.CHARACTER_IMG_WIDTH);
                 }
                 if (player.getGoRightKey() == key) {
                     player.tryGoRight();
-                    //player.setX(player.getX() + Constants.CHARACTER_IMG_WIDTH);
                 }
                 if (player.getGoUpKey() == key) {
                     player.tryGoUp();
-                    //player.setY(player.getY() - Constants.CHARACTER_IMG_HEIGHT);
                 }
                 if (player.getGoDownKey() == key) {
                     player.tryGoDown();
-                    //player.setY(player.getY() + Constants.CHARACTER_IMG_HEIGHT);
                 }
                 if (player.getAttackLeftKey() == key) {
                     player.tryAttackLeft();
