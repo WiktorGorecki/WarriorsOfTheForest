@@ -21,8 +21,10 @@ public abstract class Player{
     int goDownKey;
     int attackLeftKey;
     int attackRightKey;
+    int killCounter;
+    int id;
 
-    public Player(String name, int x, int y, int goLeftKey, int goRightKey, int goUpKey, int goDownKey, int attackLeftKey, int attackRightKey) {
+    public Player(String name, int x, int y, int goLeftKey, int goRightKey, int goUpKey, int goDownKey, int attackLeftKey, int attackRightKey, int id) {
         this.name = name;
         this.x = x;
         this.y = y;
@@ -33,7 +35,7 @@ public abstract class Player{
         this.attackLeftKey = attackLeftKey;
         this.attackRightKey = attackRightKey;
         occupatedPlaces[x][y] = true;
-
+        this.id = id;
     }
 
     public static boolean isOccupiedPlace(int x, int y) {

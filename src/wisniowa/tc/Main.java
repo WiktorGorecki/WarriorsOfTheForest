@@ -18,7 +18,8 @@ public class Main {
                 KeyEvent.VK_UP,
                 KeyEvent.VK_DOWN,
                 KeyEvent.VK_O,
-                KeyEvent.VK_P
+                KeyEvent.VK_P,
+                1
         ));
         teamMembers.add(new Archer(
                 "Legolas",
@@ -29,7 +30,8 @@ public class Main {
                 KeyEvent.VK_W,
                 KeyEvent.VK_S,
                 KeyEvent.VK_1,
-                KeyEvent.VK_2
+                KeyEvent.VK_2,
+                2
         ));
         teamMembers.add(new Mage(
                 "Gandalf",
@@ -40,7 +42,8 @@ public class Main {
                 KeyEvent.VK_Y,
                 KeyEvent.VK_H,
                 KeyEvent.VK_6,
-                KeyEvent.VK_7
+                KeyEvent.VK_7,
+                3
         ));
 
         Team team = new Team(teamMembers);

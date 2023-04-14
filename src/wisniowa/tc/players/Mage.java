@@ -8,8 +8,8 @@ import javax.swing.*;
 import java.util.ArrayList;
 
 public class Mage extends Player {
-    public Mage(String name, int x, int y, int goLeftKey, int goRightKey, int goUpKey, int goDownKey, int attackLeftKey, int attackRightKey) {
-        super(name, x, y, goLeftKey, goRightKey, goUpKey, goDownKey, attackLeftKey, attackRightKey);
+    public Mage(String name, int x, int y, int goLeftKey, int goRightKey, int goUpKey, int goDownKey, int attackLeftKey, int attackRightKey, int id) {
+        super(name, x, y, goLeftKey, goRightKey, goUpKey, goDownKey, attackLeftKey, attackRightKey, id);
         type = "mage";
         baseImage =
                 new ImageIcon(

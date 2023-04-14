@@ -7,8 +7,8 @@ import wisniowa.tc.players.projectiles.Arrow;
 import javax.swing.*;
 import java.util.ArrayList;
 public class Archer extends Player{
-    public Archer(String name, int x, int y, int goLeftKey, int goRightKey, int goUpKey, int goDownKey, int attackLeftKey, int attackRightKey) {
-        super(name, x, y, goLeftKey, goRightKey, goUpKey, goDownKey, attackLeftKey, attackRightKey);
+    public Archer(String name, int x, int y, int goLeftKey, int goRightKey, int goUpKey, int goDownKey, int attackLeftKey, int attackRightKey, int id) {
+        super(name, x, y, goLeftKey, goRightKey, goUpKey, goDownKey, attackLeftKey, attackRightKey, id);
         type = "archer";
         baseImage =
                 new ImageIcon(
