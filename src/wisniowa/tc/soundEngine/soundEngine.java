@@ -6,6 +6,25 @@ import java.io.IOException;
 import wisniowa.tc.Constants;
 
 public class soundEngine {
+
+    public static void playSound(String path) {
+        File musicFile = new File(path);
+        try {
+            AudioInputStream musicStream = AudioSystem.getAudioInputStream(musicFile);
+            try {
+                Clip clip = AudioSystem.getClip();
+                clip.open(musicStream);
+                clip.start();
+            } catch (LineUnavailableException e) {
+                popupException(e);
+            }
+        } catch (UnsupportedAudioFileException e) {
+            popupException(e);
+        } catch (IOException e) {
+            popupException(e);
+        }
+    }
+
     public static void playMusic() {
 
         File musicFile = new File(Constants.MUSIC_FOLDER+"Bamboleo.wav");

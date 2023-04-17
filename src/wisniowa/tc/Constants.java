@@ -14,6 +14,7 @@ public abstract class Constants {
     public static final String AUDIO_FOLDER =
             STATIC_FOLDER + "audio/";
     public static final String MUSIC_FOLDER = AUDIO_FOLDER + "music/";
+    public static final String SOUNDS_FOLDER = AUDIO_FOLDER + "sounds/";
 
     //Math
     //You probably don't need to remove or modify these declarations

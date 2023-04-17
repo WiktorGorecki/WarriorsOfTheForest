@@ -2,6 +2,7 @@ package wisniowa.tc.players;
 
 import wisniowa.tc.Constants;
 
+
 import java.awt.*;
 
 public abstract class Player{
@@ -121,6 +122,7 @@ public abstract class Player{
         String className = this.getClass().getSimpleName();
         System.out.println("dziala left: "+className);
         attackLeft();
+
     }
 
     public void tryAttackRight(){

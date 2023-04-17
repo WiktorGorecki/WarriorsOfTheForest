@@ -3,8 +3,11 @@ package wisniowa.tc.players;
 import wisniowa.tc.Constants;
 import wisniowa.tc.GamePanel;
 import wisniowa.tc.monsters.Monster;
+import wisniowa.tc.soundEngine.soundEngine;
 
 import javax.swing.*;
+
+import static wisniowa.tc.Constants.SOUNDS_FOLDER;
 
 public class Warrior extends Player{
 
@@ -24,6 +27,7 @@ public class Warrior extends Player{
         if (i > 0) {
             for (Player player : GamePanel.getPlayers()) {
                 if (player.getX() == i-1 && player.getY() == y) {
+                    soundEngine.playSound(SOUNDS_FOLDER + "hit.wav");
                     player.setHealth(player.getHealth()-20);
                     System.out.println(player.getName()+"'s health: "+player.getHealth());
                     if (player.getHealth() <= 0) {
@@ -37,6 +41,7 @@ public class Warrior extends Player{
             }
             for (Monster monster : GamePanel.getMonsters()) {
                 if (monster.getX() == i-1 && monster.getY() == y) {
+                    soundEngine.playSound(SOUNDS_FOLDER + "hit.wav");
                     monster.setHealth(monster.getHealth()-20);
                     System.out.println("Monster's health: "+monster.getHealth());
                     if (monster.getHealth() <= 0) {
@@ -58,6 +63,7 @@ public class Warrior extends Player{
         if (i < Constants.MAX_RIGHT_POSITION) {
             for (Player player : GamePanel.getPlayers()) {
                 if (player.getX() == i+1 && player.getY() == y) {
+                    soundEngine.playSound(SOUNDS_FOLDER + "hit.wav");
                     player.setHealth(player.getHealth()-20);
                     System.out.println(player.getName()+"'s health: "+player.getHealth());
                     if (player.getHealth() <= 0) {
@@ -71,6 +77,7 @@ public class Warrior extends Player{
             }
             for (Monster monster : GamePanel.getMonsters()) {
                 if (monster.getX() == i+1 && monster.getY() == y) {
+                    soundEngine.playSound(SOUNDS_FOLDER + "hit.wav");
                     monster.setHealth(monster.getHealth()-20);
                     System.out.println("Monster's health: "+monster.getHealth());
                     if (monster.getHealth() <= 0) {
