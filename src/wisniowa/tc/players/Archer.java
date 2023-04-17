@@ -3,9 +3,13 @@ package wisniowa.tc.players;
 import wisniowa.tc.Constants;
 import wisniowa.tc.GamePanel;
 import wisniowa.tc.players.projectiles.Arrow;
+import wisniowa.tc.soundEngine.soundEngine;
 
 import javax.swing.*;
 import java.util.ArrayList;
+
+import static wisniowa.tc.Constants.SOUNDS_FOLDER;
+
 public class Archer extends Player{
     public Archer(String name, int x, int y, int goLeftKey, int goRightKey, int goUpKey, int goDownKey, int attackLeftKey, int attackRightKey, int id) {
         super(name, x, y, goLeftKey, goRightKey, goUpKey, goDownKey, attackLeftKey, attackRightKey, id);
@@ -23,6 +27,7 @@ public class Archer extends Player{
             Arrow arrow = new Arrow(x, y, "left", this.id);
             GamePanel.projectiles.add(arrow); // add the new arrow to the list
             System.out.println("Left Archer arrow");
+            soundEngine.playSound(SOUNDS_FOLDER + "shoot.wav");
         }
     }
 
@@ -33,6 +38,7 @@ public class Archer extends Player{
             Arrow arrow=new Arrow(x, y, "right", this.id);
             GamePanel.projectiles.add(arrow);
             System.out.println("Right Archer arrow");
+            soundEngine.playSound(SOUNDS_FOLDER + "shoot.wav");
         }
     }
 
