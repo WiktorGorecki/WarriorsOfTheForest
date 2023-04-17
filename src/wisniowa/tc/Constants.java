@@ -13,6 +13,7 @@ public abstract class Constants {
             STATIC_FOLDER + "images/";
     public static final String AUDIO_FOLDER =
             STATIC_FOLDER + "audio/";
+    public static final String MUSIC_FOLDER = AUDIO_FOLDER + "music/";
 
     //Math
     //You probably don't need to remove or modify these declarations

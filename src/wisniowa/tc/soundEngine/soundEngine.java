@@ -3,11 +3,12 @@ import javax.sound.sampled.*;
 import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
+import wisniowa.tc.Constants;
 
 public class soundEngine {
     public static void playMusic() {
 
-        File musicFile = new File("");
+        File musicFile = new File(Constants.MUSIC_FOLDER+"Bamboleo.wav");
         try {
             AudioInputStream musicStream = AudioSystem.getAudioInputStream(musicFile);
             try {
