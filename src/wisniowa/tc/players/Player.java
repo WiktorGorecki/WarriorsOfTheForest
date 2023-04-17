@@ -23,7 +23,8 @@ public abstract class Player{
     int attackLeftKey;
     int attackRightKey;
     int killCounter;
-    int id;
+    public int id;
+    private int maxHP;
 
     public Player(String name, int x, int y, int goLeftKey, int goRightKey, int goUpKey, int goDownKey, int attackLeftKey, int attackRightKey, int id) {
         this.name = name;
