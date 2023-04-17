@@ -51,6 +51,14 @@ public class GamePanel extends JPanel {
                         if (player.getHealth() <= 0) {
                             removePlayer(player);
                             System.out.println("Player " + player.getName() + " was defeated!");
+
+
+
+
+                            //Iterate through all players and find one that's id = projectile's parrent's id and add them 1 killpoint
+                            //Napisz do tego oddzielną funkcję
+
+
                         } else {
                             System.out.println("Left projectile hit " + player.getName());
                         }
