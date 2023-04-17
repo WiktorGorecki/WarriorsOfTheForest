@@ -14,6 +14,8 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import static java.lang.String.valueOf;
+
 public class GamePanel extends JPanel {
 
     static ArrayList<Player> players;
@@ -143,6 +145,7 @@ public class GamePanel extends JPanel {
                     monster.getY() * Constants.CHARACTER_IMG_HEIGHT,
                     this
             );
+            g.drawString(valueOf("HP: "+monster.getHealth()),monster.getX()*Constants.CHARACTER_IMG_WIDTH+2, monster.getY()*Constants.CHARACTER_IMG_HEIGHT+30);
         }
         for (Player player : players) {
             g.drawImage(
