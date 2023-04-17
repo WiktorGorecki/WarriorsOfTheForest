@@ -38,7 +38,10 @@ public abstract class Player{
         this.attackRightKey = attackRightKey;
         occupatedPlaces[x][y] = true;
         this.id = id;
+        this.maxHP=this.health;
     }
+
+
 
     public static boolean isOccupiedPlace(int x, int y) {
         return occupatedPlaces[x][y];
