@@ -146,4 +146,20 @@ public abstract class Player{
     public String getName() {
         return name;
     }
+
+    public int getKillCounter() {
+        return killCounter;
+    }
+
+    public void setKillCounter(int killCounter) {
+        this.killCounter = killCounter;
+    }
+
+    public int getMaxHP() {
+        return maxHP;
+    }
+
+    public void setMaxHP(int maxHP) {
+        this.maxHP = maxHP;
+    }
 }

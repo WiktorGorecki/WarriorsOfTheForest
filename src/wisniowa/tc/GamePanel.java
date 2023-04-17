@@ -43,7 +43,6 @@ public class GamePanel extends JPanel {
                 projectileIterator.remove();
                 continue;
             }
-            System.out.println("a=" + projectile.getX());
             if (projectile.getDirection().equals("left")) {
                 boolean projectileHit = false;
                 for (Player player : players) {
@@ -53,14 +52,6 @@ public class GamePanel extends JPanel {
                         if (player.getHealth() <= 0) {
                             removePlayer(player);
                             System.out.println("Player " + player.getName() + " was defeated!");
-
-
-
-
-                            //Iterate through all players and find one that's id = projectile's parrent's id and add them 1 killpoint
-                            //Napisz do tego oddzielną funkcję
-
-
                         } else {
                             System.out.println("Left projectile hit " + player.getName());
                         }
@@ -75,6 +66,14 @@ public class GamePanel extends JPanel {
                         if (monster.getHealth() <= 0) {
                             removeMonster(monster);
                             System.out.println("A monster was defeated!");
+                            //Iterate through all players and find one that's id = projectile's parrent's id and add them 1 killpoint
+                            //Napisz do tego oddzielną funkcję
+                            for(Player player : players) {
+                                if (player.id == projectile.parentId){
+                                    player.setKillCounter(player.getKillCounter()+1);
+                                    player.setHealth(player.getHealth()+5);
+                                }
+                            }
                         } else {
                             System.out.println("Left projectile hit a monster");
                         }
@@ -113,6 +112,13 @@ public class GamePanel extends JPanel {
                         if (monster.getHealth() <= 0) {
                             removeMonster(monster);
                             System.out.println("A monster was defeated!");
+                            for(Player player : players) {
+                                if (player.id == projectile.parentId){
+                                    player.setKillCounter(player.getKillCounter()+1);
+                                    if(player.getHealth()<player.getMaxHP())
+                                        player.setHealth(player.getHealth()+5);
+                                }
+                            }
                         } else {
                             System.out.println("Right projectile hit a monster");
                         }

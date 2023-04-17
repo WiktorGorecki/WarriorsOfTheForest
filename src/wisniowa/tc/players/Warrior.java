@@ -45,6 +45,8 @@ public class Warrior extends Player{
                     monster.setHealth(monster.getHealth()-20);
                     System.out.println("Monster's health: "+monster.getHealth());
                     if (monster.getHealth() <= 0) {
+                        setHealth(getHealth()+5);
+                        setKillCounter(getKillCounter()+1);
                         GamePanel.removeMonster(monster);
                         System.out.println("A monster was defeated!");
                     } else {
