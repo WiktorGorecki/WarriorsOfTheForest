@@ -1,6 +1,8 @@
 package wisniowa.tc;
 
 import wisniowa.tc.players.*;
+import wisniowa.tc.soundEngine.soundEngine;
+
 
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
@@ -48,5 +50,6 @@ public class Main {
 
         Team team = new Team(teamMembers);
         new MainWindow(Constants.WINDOW_WIDTH, Constants.WINDOW_HEIGHT, team);
+        soundEngine.playMusic();
     }
 }
