@@ -74,6 +74,7 @@ protected int health;
                 setBaseImage(new ImageIcon(Constants.IMAGE_FOLDER + "monster/1.png").getImage());
                 g.setColor(Color.red);
                 g.fillRect(attackX * Constants.CHARACTER_IMG_WIDTH, attackY * Constants.CHARACTER_IMG_HEIGHT, Constants.CHARACTER_IMG_WIDTH, Constants.CHARACTER_IMG_HEIGHT);
+                g.setColor(Color.black);
                 for (Player player : GamePanel.getPlayers()) {
                     if (player.getX() == attackX && player.getY() == attackY) {
                         player.setHealth(player.getHealth() - 20);

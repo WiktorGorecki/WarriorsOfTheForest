@@ -154,6 +154,7 @@ public class GamePanel extends JPanel {
                     player.getY() * Constants.CHARACTER_IMG_HEIGHT,
                     this
             );
+            g.drawString(valueOf("HP: "+player.getHealth()),player.getX()*Constants.CHARACTER_IMG_WIDTH, player.getY()*Constants.CHARACTER_IMG_HEIGHT+20);
         }
     }
 
