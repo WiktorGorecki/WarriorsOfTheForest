@@ -32,6 +32,8 @@ public class GamePanel extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+
+        //Projectile Renderer
         Iterator<Projectile> projectileIterator = projectiles.iterator();
         while (projectileIterator.hasNext()) {
             Projectile projectile = projectileIterator.next();
@@ -74,6 +76,7 @@ public class GamePanel extends JPanel {
                     System.out.println("ala");
                     projectileIterator.remove();
                     repaint();
+                    break;
                 } else {
                     projectile.setX(projectile.getDirection());
                 }
@@ -111,6 +114,7 @@ public class GamePanel extends JPanel {
                     System.out.println("ala");
                     projectileIterator.remove();
                     repaint();
+                    break;
                 } else {
                     projectile.setX(projectile.getDirection());
                 }
