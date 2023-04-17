@@ -3,9 +3,12 @@ package wisniowa.tc.players;
 import wisniowa.tc.Constants;
 import wisniowa.tc.GamePanel;
 import wisniowa.tc.players.projectiles.Spell;
+import wisniowa.tc.soundEngine.soundEngine;
 
 import javax.swing.*;
 import java.util.ArrayList;
+
+import static wisniowa.tc.Constants.SOUNDS_FOLDER;
 
 public class Mage extends Player {
     public Mage(String name, int x, int y, int goLeftKey, int goRightKey, int goUpKey, int goDownKey, int attackLeftKey, int attackRightKey, int id) {
@@ -70,6 +73,7 @@ public class Mage extends Player {
     public void attackLeft() {
         int i = x;
         if (i > 0) {
+            soundEngine.playSound(SOUNDS_FOLDER + "fireball.wav");
             Spell spell = new Spell(x, y, "left", this.id);
             GamePanel.projectiles.add(spell);
             System.out.println("Left Mage missile");
@@ -80,6 +84,7 @@ public class Mage extends Player {
     public void attackRight() {
         int i = x;
         if (i < Constants.MAX_RIGHT_POSITION / Constants.CHARACTER_IMG_WIDTH) {
+            soundEngine.playSound(SOUNDS_FOLDER + "fireball.wav");
             Spell spell = new Spell(x , y, "right", this.id);
             GamePanel.projectiles.add(spell);
             System.out.println("Right Mage missile");
